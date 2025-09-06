@@ -1,18 +1,34 @@
-TARGET = shell
-CC = gcc
-CFLAGS = -Wall -Wextra -std=c99
-SRCS = shell.c -lm -lncurses
-OBJS = $(SRCS:.c=.o)
+include config.mk
 
-$(TARGET): $(OBJS)
-	$(CC) $(OBJS) -o $(TARGET) -lm
+# Sources
+SRC = shell.c
+OBJ = ${SRC:.c=.o}
+TARGET = mutinyos
+
+# Library sources
+LIBSRC = lib/tinyexpr.c lib/compatibility.c
+LIBOBJ = ${LIBSRC:.c=.o}
+
+# All objects
+OBJ += ${LIBOBJ}
+
+all: mutinyos
 
 %.o: %.c
-	$(CC) $(CFLAGS) -c $< -o $@
+	${CC} -c ${CFLAGS} $< -o $@
+
+lib/%.o: lib/%.c
+	${CC} -c -w -std=c99 $< -o $@
+
+${OBJ}: config.h config.mk
+
+mutinyos: ${OBJ}
+	${CC} -o $@ ${OBJ} ${LDFLAGS}
 
 clean:
-	rm -f $(TARGET) $(OBJS)
+	rm -f shell ${OBJ} shell-${VERSION}.tar.gz mutiny mutinyos mutinyos-${VERSION}.tar.gz
 
 run: $(TARGET)
 	./$(TARGET)
 
+.PHONY: all clean run

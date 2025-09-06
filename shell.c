@@ -1,12 +1,11 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include <unistd.h>
 #include <sys/wait.h>
-
-#include "lib/compatibility.h"
+#include <unistd.h>
 
 #include "calc.c"
+#include "lib/compatibility.h"
 
 #define MAX_ARGS 20
 #define MAX_CMD  100
@@ -26,7 +25,8 @@ int main() {
 			break;
 		}
 
-		if (!strcmp(line, "clear") || !strcmp(line, "clr") || !strcmp(line, "cls")) {
+		if (!strcmp(line, "clear") || !strcmp(line, "clr")
+		    || !strcmp(line, "cls")) {
 			clrscr();
 			continue;
 		}
@@ -41,7 +41,7 @@ int main() {
 
 		// tokenize
 		char *argv[MAX_ARGS];
-		int argc = 0;  
+		int   argc  = 0;
 		char *token = strtok(line, " ");
 		while (token && argc < MAX_ARGS - 1) {
 			argv[argc++] = token;
