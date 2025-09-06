@@ -742,9 +742,9 @@ IncludeCategories:
 IncludeIsMainRegex: '(Test)?$'
 IndentAccessModifiers: false
 IndentCaseBlocks: true
-IndentCaseLabels: true
+IndentCaseLabels: false
 IndentGotoLabels: false
-IndentPPDirectives: BeforeHash
+IndentPPDirectives: None
 IndentRequiresClause: false
 IndentWidth: 4
 IndentWrappedFunctionNames: false
