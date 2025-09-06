@@ -1,7 +1,11 @@
 include config.mk
 
 # Sources
-SRC = shell.c
+SRC = shell.c \
+	  cmd.c \
+	  calc.c \
+	  help.c \
+	  date.c
 OBJ = ${SRC:.c=.o}
 TARGET = mutinyos
 

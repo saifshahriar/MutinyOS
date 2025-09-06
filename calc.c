@@ -5,10 +5,12 @@
 
 #include "lib/tinyexpr.h"
 
+#include "calc.h"
+
 #define MAX_ARGS 20
 #define MAX_CMD  100
 
-int calc() {
+void calc() {
 	char line[MAX_CMD];
 
 	while (1) {
@@ -48,5 +50,4 @@ int calc() {
 		// } else
 		//     wait(NULL);
 	}
-	return 0;
 }
