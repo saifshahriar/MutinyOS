@@ -38,4 +38,7 @@ clean:
 run: $(TARGET)
 	./$(TARGET)
 
-.PHONY: all clean run
+readme:
+	./scc-hook.readme.sh
+
+.PHONY: all clean run readme

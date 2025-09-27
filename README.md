@@ -107,6 +107,33 @@ saif@mutiny:$> exit
 - Networking limited to TCP in user-space
 - Future: custom kernel, native shell, system calls, full OS-level features
 
+## Current Status
+
+<!-- current-status start -->
+```bash
+───────────────────────────────────────────────────────────────────────────────
+Language                 Files     Lines   Blanks  Comments     Code Complexity
+───────────────────────────────────────────────────────────────────────────────
+C                           10      1294      205       114      975        253
+C Header                    10       163       34        34       95          0
+Makefile                     2        68       18        13       37          0
+License                      1       674      121         0      553          0
+Markdown                     1       161       44         0      117          0
+Shell                        1        33        7         1       25          2
+───────────────────────────────────────────────────────────────────────────────
+Total                       25      2393      429       162     1802        255
+───────────────────────────────────────────────────────────────────────────────
+Estimated Cost to Develop (organic) $50,134
+Estimated Schedule Effort (organic) 4.41 months
+Estimated People Required (organic) 1.01
+───────────────────────────────────────────────────────────────────────────────
+Processed 80689 bytes, 0.081 megabytes (SI)
+───────────────────────────────────────────────────────────────────────────────
+```
+<!-- current-status end -->
+
+See commit history for more information.
+
 ---
 
 ## Contributors
