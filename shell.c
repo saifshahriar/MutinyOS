@@ -9,6 +9,7 @@
 #include "calc.h"
 #include "cmd.h"
 #include "date.h"
+#include "global.h"
 #include "help.h"
 
 #define MAX_ARGS 20
