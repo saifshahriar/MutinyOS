@@ -52,7 +52,7 @@ MutinyOS/
 # Clone repository
 
 ```bash
-git clone https://github.com/yourname/MutinyOS.git
+git clone https://github.com/saifshahriar/MutinyOS.git
 cd MutinyOS
 ```
 
@@ -81,13 +81,13 @@ make clean
 Example session:
 
 ```fish
-user@desktop:$> help
-user@desktop:$> calc
+saif@mutiny:$> help
+saif@mutiny:$> calc
 > 2 + 2 = 4
 
-name@desktop:$> date
+saif@mutiny:$> date
 Sat Sep 6 18:00:00 2025
-name@desktop:$> exit
+saif@mutiny:$> exit
 ```
 
 ---
