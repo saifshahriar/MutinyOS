@@ -35,7 +35,7 @@ int main() {
 			print_progs();
 		else if (cmd(line, "help"))
 			print_help();
-		else if (cmd(line, "calc"))
+		else if (cmd(line, "calc") || cmd(line, "calculator"))
 			calc();
 		else if (cmd(line, "date"))
 			date();
