@@ -5,22 +5,22 @@
 
 // clang-format off
 Prog cmds[] = {
-	{"help",       "",      "Show help text"},
-	{"cmd|cmds",   "",      "List all available commands"},
-	{"prog|progs", "",      "List all available programs"},
-	{"calculator", "calc",  "Scientific calculator"},
-	{"calender",   "cal",   "Simple calender shows weeks and days of the current month"},
-	{"hostname",   "",      "Print effective host name"},
-	{"whoami",     "",      "Print effective username"},
-	{"sh",         "",      "MutinyOS's standard POSIX shell to control the system"},
-	{NULL, NULL, NULL}
+	{ "help",       "",      "Show help text" },
+	{ "cmd|cmds",   "",      "List all available commands" },
+	{ "prog|progs", "",      "List all available programs" },
+	{ "calculator", "calc",  "Scientific calculator" },
+	{ "calender",   "cal",   "Simple calender shows weeks and days of the current month" },
+	{ "hostname",   "",      "Print effective host name" },
+	{ "whoami",     "",      "Print effective username" },
+	{ "sh",         "",      "MutinyOS's standard POSIX shell to control the system" },
+	{ NULL,         NULL,    NULL }
 };
 
 Prog progs[] = {
-	{"calculator", "calc",  "Scientific calculator"},
-	{"calender",   "cal",   "Simple calender shows weeks and days of the current month"},
-	{"sh",         "",      "MutinyOS's standard POSIX shell to control the system"},
-	{NULL, NULL, NULL}
+	{ "calculator", "calc",  "Scientific calculator" },
+	{ "calender",   "cal",   "Simple calender shows weeks and days of the current month" },
+	{ "sh",         "",      "MutinyOS's standard POSIX shell to control the system" },
+	{ NULL,         NULL,    NULL }
 };
 // clang-format on
 
