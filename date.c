@@ -18,9 +18,7 @@ void date() {
 		return;
 	}
 
-	if (strftime((char[100]) { 0 }, 100, "%a %b %d %H:%M:%S %z %Y\n", local)) {
-		char buffer[100];
-		strftime(buffer, sizeof(buffer), "%a %b %d %H:%M:%S %z %Y\n", local);
-		fputs(buffer, stdout);
-	}
+	char buf[100];
+	if (strftime(buf, sizeof(buf), "%a %b %d %H:%M:%S %z %Y\n", local))
+		fputs(buf, stdout);
 }
