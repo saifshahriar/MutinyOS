@@ -11,16 +11,22 @@
 #include "date.h"
 #include "global.h"
 #include "help.h"
+#include "hostname.h"
+#include "whoami.h"
 
 #define MAX_ARGS 20
 #define MAX_CMD  100
 
 int main() {
+	/* cache necessary data globally */
+	fetch_username();
+	fetch_hostname();
+
 	char line[MAX_CMD];
 
 	print_help();
 	while (1) {
-		printf("name@desktop:$> ");
+		printf("%s@%s%% ", globals.username, globals.hostname);
 		if (!fgets(line, sizeof(line), stdin))
 			break;
 
@@ -40,6 +46,10 @@ int main() {
 			calc();
 		else if (cmd(line, "date"))
 			date();
+		else if (cmd(line, "hostname"))
+			hostname();
+		else if (cmd(line, "whoami"))
+			whoami();
 		else if (strlen(line) > 0) {   // for unreconized commands create a base
 			                           // system fork
 			// tokenize

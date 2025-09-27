@@ -10,6 +10,8 @@ Prog cmds[] = {
 	{"prog|progs", "",      "List all available programs"},
 	{"calculator", "calc",  "Scientific calculator"},
 	{"calender",   "cal",   "Simple calender shows weeks and days of the current month"},
+	{"hostname",   "",      "Print effective host name"},
+	{"whoami",     "",      "Print effective username"},
 	{"sh",         "",      "MutinyOS's standard POSIX shell to control the system"},
 	{NULL, NULL, NULL}
 };
