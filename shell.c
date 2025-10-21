@@ -7,6 +7,7 @@
 #include "lib/compatibility.h"
 
 #include "calc.h"
+#include "chat.h"
 #include "cmd.h"
 #include "credit.h"
 #include "date.h"
@@ -54,6 +55,8 @@ int main() {
 			whoami();
 		else if (cmd(line, "credit"))
 			credit();
+		else if (cmd(line, "chat"))
+			chat_client();
 		else if (strlen(line) > 0) {   // for unreconized commands create a base
 			                           // system fork
 			// tokenize

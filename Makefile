@@ -9,7 +9,8 @@ SRC = shell.c \
 	  global.c \
 	  hostname.c \
 	  whoami.c \
-	  credit.c
+	  credit.c \
+	  chat.c
 OBJ = ${SRC:.c=.o}
 TARGET = mutinyos
 
