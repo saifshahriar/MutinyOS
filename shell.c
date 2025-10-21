@@ -8,6 +8,7 @@
 
 #include "calc.h"
 #include "cmd.h"
+#include "credit.h"
 #include "date.h"
 #include "global.h"
 #include "help.h"
@@ -24,6 +25,7 @@ int main() {
 
 	char line[MAX_CMD];
 
+	clrscr();
 	print_help();
 	while (1) {
 		printf("%s@%s%% ", globals.username, globals.hostname);
@@ -50,6 +52,8 @@ int main() {
 			hostname();
 		else if (cmd(line, "whoami"))
 			whoami();
+		else if (cmd(line, "credit"))
+			credit();
 		else if (strlen(line) > 0) {   // for unreconized commands create a base
 			                           // system fork
 			// tokenize

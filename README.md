@@ -110,6 +110,7 @@ saif@mutiny:$> exit
 ## Current Status
 
 <!-- current-status start -->
+
 ```bash
 ───────────────────────────────────────────────────────────────────────────────
 Language                 Files     Lines   Blanks  Comments     Code Complexity
@@ -130,6 +131,7 @@ Estimated People Required (organic) 1.01
 Processed 80689 bytes, 0.081 megabytes (SI)
 ───────────────────────────────────────────────────────────────────────────────
 ```
+
 <!-- current-status end -->
 
 See commit history for more information.
