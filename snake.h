@@ -1,0 +1,17 @@
+void init_colors();
+void init_game();
+void cleanup_game();
+void generate_food();
+void draw_borders();
+void draw_snake();
+void draw_food();
+void draw_score();
+void draw_game_over();
+void draw_pause();
+void move_snake();
+int check_collision();
+int check_food_collision();
+void grow_snake();
+void update_game();
+void handle_input();
+void draw_game();
