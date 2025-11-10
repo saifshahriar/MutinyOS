@@ -1,0 +1,13 @@
+void init_editor();
+void free_editor();
+void set_status(const char *fmt, ...);
+void insert_char(int y, int x, char c);
+void delete_char(int y, int x);
+void insert_line(int y);
+void delete_line(int y);
+int load_file(const char *filename);
+int save_file(const char *filename);
+void show_help();
+void draw_editor(WINDOW *win);
+void handle_keypress(int ch);
+void update_scroll(int height);
