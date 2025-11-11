@@ -4,10 +4,8 @@
 #include "global.h"
 #include "hostname.h"
 
-static const char *path = "/var/tmp/mutiny/hostname";
-
 void fetch_hostname() {
-	FILE *f = fopen(path, "r");
+	FILE *f = fopen(HOST_F, "r");
 
 	if (!f) {
 		perror("hostname: Error opening file");
