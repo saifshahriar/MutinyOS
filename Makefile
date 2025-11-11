@@ -19,7 +19,8 @@ SRC = shell.c \
 	  passman.c \
 	  sudoku.c \
 	  sysinfo.c \
-	  tic-tac-toe.c
+	  tic-tac-toe.c \
+	  bug.c
 OBJ = ${SRC:.c=.o}
 
 # Library sources

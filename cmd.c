@@ -9,6 +9,7 @@ Prog cmds[] = {
 	{ "cmd|cmds",   "",      "List all available commands" },
 	{ "prog|progs", "",      "List all available programs" },
 	{ "addusr",     "",      "Add another user to the system" },
+	{ "bug",        "",      "Standard text editor for MutinyOS" },
 	{ "calculator", "calc",  "Scientific calculator" },
 	{ "calender",   "cal",   "Simple calender shows weeks and days of the current month" },
 	{ "chat",       "",      "Open chat client" },
@@ -25,6 +26,7 @@ Prog cmds[] = {
 };
 
 Prog progs[] = {
+	{ "bug",        "",      "Standard text editor for MutinyOS" },
 	{ "calculator", "calc",  "Scientific calculator" },
 	{ "calender",   "cal",   "Simple calender shows weeks and days of the current month" },
 	{ "passman",    "",      "Password manager for MutinyOS" },

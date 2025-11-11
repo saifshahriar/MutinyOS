@@ -10,6 +10,7 @@
 #include "lib/compatibility.h"
 #include "lib/util.h"
 
+#include "bug.h"
 #include "cal.h"
 #include "calc.h"
 #include "chat.h"
@@ -128,6 +129,8 @@ int main() {
 			sysinfo();
 		else if (cmd(line, "tictactoe"))
 			tictactoe();
+		else if (cmd(line, "bug"))
+			bug();
 		else {
 			// tokenize
 			char *argv[MAX_ARGS];
