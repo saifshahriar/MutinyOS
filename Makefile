@@ -52,6 +52,9 @@ clean:
 run: $(TARGET)
 	./$(TARGET)
 
+server:
+	$(CC) server.c -o server -lczmq -lzmq
+
 # Install: create directories and copy binary
 install: $(TARGET)
 	@echo "Creating directories under $(BASE_DIR)..."

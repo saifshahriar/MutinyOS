@@ -5,6 +5,8 @@
 #include <stdlib.h>
 #include <string.h>
 
+#include "global.h"
+
 #define PORT         1111
 #define BUFFER_SIZE  1024
 #define MAX_MESSAGES 1000
@@ -16,7 +18,7 @@ int     rows, cols;
 char *messages[MAX_MESSAGES];
 int   msg_count = 0;
 
-void redraw_messages() {
+static void redraw_messages() {
 	werase(msg_win);
 	int start = msg_count > rows - 3 ? msg_count - (rows - 3) : 0;
 	for (int i = start; i < msg_count; i++)
@@ -25,7 +27,7 @@ void redraw_messages() {
 	wrefresh(msg_win);
 }
 
-void resize_windows() {
+static void resize_windows() {
 	getmaxyx(stdscr, rows, cols);
 
 	wresize(msg_win, rows - 3, cols);
@@ -39,18 +41,18 @@ void resize_windows() {
 	wrefresh(input_win);
 }
 
-void handle_winch(int sig) {
+static void handle_winch(int sig) {
 	endwin();
 	refresh();
 	clear();
 	resize_windows();
 }
 
-void get_usrname_serverip(char *username, int username_size, char *server_ip,
-                          int server_ip_size) {
-	printf("Enter your name: ");
-	fgets(username, username_size, stdin);
-	username[strcspn(username, "\n")] = 0;
+static void get_usrname_serverip(/* char *username, int username_size, */
+                                 char *server_ip, int server_ip_size) {
+	/* printf("Enter your name: "); */
+	/* fgets(username, username_size, stdin); */
+	/* username[strcspn(username, "\n")] = 0; */
 
 	printf("Enter server IP (DEFAULT 127.0.0.1): ");
 	fgets(server_ip, server_ip_size, stdin);
@@ -63,10 +65,10 @@ void get_usrname_serverip(char *username, int username_size, char *server_ip,
 }
 
 int chat_client() {
-	char username[32];
-	char server_ip[64];
+	char *username = globals.username;
+	char  server_ip[64];
 
-	get_usrname_serverip(username, sizeof(username), server_ip,
+	get_usrname_serverip(/* username, sizeof(username),*/ server_ip,
 	                     sizeof(server_ip));
 
 	char endpoint[128];
@@ -142,7 +144,6 @@ int chat_client() {
 			input[pos]   = '\0';
 		}
 
-		// redraw input box
 		werase(input_win);
 		box(input_win, 0, 0);
 		mvwprintw(input_win, 1, 1, "> %s", input);
@@ -150,7 +151,6 @@ int chat_client() {
 		wrefresh(input_win);
 	}
 
-	// cleanup
 	for (int i = 0; i < msg_count; i++)
 		free(messages[i]);
 	endwin();
