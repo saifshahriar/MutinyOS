@@ -10,6 +10,7 @@
 #include "lib/compatibility.h"
 #include "lib/util.h"
 
+#include "cal.h"
 #include "calc.h"
 #include "chat.h"
 #include "cmd.h"
@@ -113,6 +114,8 @@ int main() {
 			chusr();
 		else if (cmd(line, "addusr"))
 			addusr();
+		else if (cmd(line, "cal"))
+			cal();
 		else {
 			// tokenize
 			char *argv[MAX_ARGS];

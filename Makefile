@@ -14,7 +14,8 @@ SRC = shell.c \
 	  register.c \
 	  login.c \
 	  users.c \
-	  huser.c
+	  huser.c \
+	  cal.c
 OBJ = ${SRC:.c=.o}
 
 # Library sources
