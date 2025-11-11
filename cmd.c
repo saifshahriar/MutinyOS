@@ -21,6 +21,7 @@ Prog cmds[] = {
 	{ "tictactoe",  "",      "Games/tictactoe" },
 	{ "users",      "",      "List all the users in a system" },
 	{ "whoami",     "",      "Print effective username" },
+	{ "snake",  "",      "Games/snake" },
 	{ "sh",         "",      "MutinyOS's standard POSIX shell to control the system" },
 	{ NULL,         NULL,    NULL }
 };
@@ -33,6 +34,7 @@ Prog progs[] = {
 	{ "sudoku",     "",      "Games/sudoku" },
 	{ "sysinfo",     "",      "Shows system information" },
 	{ "tictactoe",  "",      "Games/tictactoe" },
+	{ "snake",  "",      "Games/snake" },
 	{ "sh",         "",      "MutinyOS's standard POSIX shell to control the system" },
 	{ NULL,         NULL,    NULL }
 };

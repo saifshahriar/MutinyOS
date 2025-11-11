@@ -24,6 +24,8 @@
 #include "login.h"
 #include "passman.h"
 #include "register.h"
+#include "sadik.h"
+#include "snake.h"
 #include "sudoku.h"
 #include "sysinfo.h"
 #include "tic-tac-toe.h"
@@ -131,6 +133,10 @@ int main() {
 			tictactoe();
 		else if (cmd(line, "bug"))
 			bug();
+		else if (cmd(line, "tasker"))
+			tasker();
+		else if (cmd(line, "snake"))
+			snake_main();
 		else {
 			// tokenize
 			char *argv[MAX_ARGS];
