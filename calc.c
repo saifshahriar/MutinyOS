@@ -5,6 +5,7 @@
 
 #include "lib/compatibility.h"
 #include "lib/tinyexpr.h"
+#include "lib/util.h"
 
 #include "calc.h"
 #include "cmd.h"
@@ -163,7 +164,7 @@ void calc() {
 		if (!fgets(line, sizeof(line), stdin))
 			break;
 
-		line[strcspn(line, "\n")] = '\0';
+		rmnl(line);
 
 		if (cmd(line, "exit"))
 			break;

@@ -115,20 +115,20 @@ saif@mutiny:$> exit
 ───────────────────────────────────────────────────────────────────────────────
 Language                 Files     Lines   Blanks  Comments     Code Complexity
 ───────────────────────────────────────────────────────────────────────────────
-C                           10      1294      205       114      975        253
-C Header                    10       163       34        34       95          0
-Makefile                     2        68       18        13       37          0
+C                           22      2598      446       127     2025        497
+C Header                    17       204       40        35      129          0
+Makefile                     2       115       21        20       74          0
 License                      1       674      121         0      553          0
-Markdown                     1       161       44         0      117          0
+Markdown                     1       163       46         0      117          0
 Shell                        1        33        7         1       25          2
 ───────────────────────────────────────────────────────────────────────────────
-Total                       25      2393      429       162     1802        255
+Total                       44      3787      681       183     2923        499
 ───────────────────────────────────────────────────────────────────────────────
-Estimated Cost to Develop (organic) $50,134
-Estimated Schedule Effort (organic) 4.41 months
-Estimated People Required (organic) 1.01
+Estimated Cost to Develop (organic) $83,313
+Estimated Schedule Effort (organic) 5.35 months
+Estimated People Required (organic) 1.38
 ───────────────────────────────────────────────────────────────────────────────
-Processed 80689 bytes, 0.081 megabytes (SI)
+Processed 110833 bytes, 0.111 megabytes (SI)
 ───────────────────────────────────────────────────────────────────────────────
 ```
 
