@@ -8,9 +8,13 @@ Prog cmds[] = {
 	{ "help",       "",      "Show help text" },
 	{ "cmd|cmds",   "",      "List all available commands" },
 	{ "prog|progs", "",      "List all available programs" },
+	{ "addusr",     "",      "Add another user to the system" },
 	{ "calculator", "calc",  "Scientific calculator" },
 	{ "calender",   "cal",   "Simple calender shows weeks and days of the current month" },
+	{ "chat",       "",      "Open chat client" },
+	{ "chusr",      "",      "Login to another user account" },
 	{ "hostname",   "",      "Print effective host name" },
+	{ "users",      "",      "List all the users in a system" },
 	{ "whoami",     "",      "Print effective username" },
 	{ "sh",         "",      "MutinyOS's standard POSIX shell to control the system" },
 	{ NULL,         NULL,    NULL }
