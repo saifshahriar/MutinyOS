@@ -15,7 +15,11 @@ SRC = shell.c \
 	  login.c \
 	  users.c \
 	  huser.c \
-	  cal.c
+	  cal.c \
+	  passman.c \
+	  sudoku.c \
+	  sysinfo.c \
+	  tic-tac-toe.c
 OBJ = ${SRC:.c=.o}
 
 # Library sources

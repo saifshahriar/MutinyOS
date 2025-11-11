@@ -21,7 +21,11 @@
 #include "hostname.h"
 #include "huser.h"
 #include "login.h"
+#include "passman.h"
 #include "register.h"
+#include "sudoku.h"
+#include "sysinfo.h"
+#include "tic-tac-toe.h"
 #include "users.h"
 #include "whoami.h"
 
@@ -116,6 +120,14 @@ int main() {
 			addusr();
 		else if (cmd(line, "cal"))
 			cal();
+		else if (cmd(line, "passman"))
+			passman();
+		else if (cmd(line, "sudoku"))
+			sudoku();
+		else if (cmd(line, "sysinfo"))
+			sysinfo();
+		else if (cmd(line, "tictactoe"))
+			tictactoe();
 		else {
 			// tokenize
 			char *argv[MAX_ARGS];

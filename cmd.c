@@ -14,6 +14,10 @@ Prog cmds[] = {
 	{ "chat",       "",      "Open chat client" },
 	{ "chusr",      "",      "Login to another user account" },
 	{ "hostname",   "",      "Print effective host name" },
+	{ "passman",    "",      "Password manager for MutinyOS" },
+	{ "sudoku",     "",      "Games/sudoku" },
+	{ "sysinfo",    "",      "Shows system information" },
+	{ "tictactoe",  "",      "Games/tictactoe" },
 	{ "users",      "",      "List all the users in a system" },
 	{ "whoami",     "",      "Print effective username" },
 	{ "sh",         "",      "MutinyOS's standard POSIX shell to control the system" },
@@ -23,6 +27,10 @@ Prog cmds[] = {
 Prog progs[] = {
 	{ "calculator", "calc",  "Scientific calculator" },
 	{ "calender",   "cal",   "Simple calender shows weeks and days of the current month" },
+	{ "passman",    "",      "Password manager for MutinyOS" },
+	{ "sudoku",     "",      "Games/sudoku" },
+	{ "sysinfo",     "",      "Shows system information" },
+	{ "tictactoe",  "",      "Games/tictactoe" },
 	{ "sh",         "",      "MutinyOS's standard POSIX shell to control the system" },
 	{ NULL,         NULL,    NULL }
 };
