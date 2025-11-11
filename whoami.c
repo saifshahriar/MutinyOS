@@ -4,10 +4,8 @@
 #include "global.h"
 #include "whoami.h"
 
-static const char *path = "/var/tmp/mutiny/username";
-
 void fetch_username() {
-	FILE *f = fopen(path, "r");
+	FILE *f = fopen(globals.username, "r");
 
 	if (!f) {
 		perror("username: Error opening file");
