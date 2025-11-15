@@ -1,4 +1,3 @@
-#include <ctype.h>
 #include <ncurses.h>
 #include <stdio.h>
 #include <stdlib.h>

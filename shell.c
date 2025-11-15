@@ -13,6 +13,7 @@
 #include "bug.h"
 #include "cal.h"
 #include "calc.h"
+#include "cd.h"
 #include "chat.h"
 #include "cmd.h"
 #include "credit.h"
@@ -22,13 +23,17 @@
 #include "hostname.h"
 #include "huser.h"
 #include "login.h"
+#include "ls.h"
+#include "mkdir.h"
 #include "passman.h"
 #include "register.h"
+#include "rm.h"
 #include "sadik.h"
 #include "snake.h"
 #include "sudoku.h"
-#include "sysinfo.h"
+#include "ted.h"
 #include "tic-tac-toe.h"
+#include "touch.h"
 #include "users.h"
 #include "whoami.h"
 
@@ -127,39 +132,35 @@ int main() {
 			passman();
 		else if (cmd(line, "sudoku"))
 			sudoku();
-		else if (cmd(line, "sysinfo"))
-			sysinfo();
 		else if (cmd(line, "tictactoe"))
 			tictactoe();
-		else if (cmd(line, "bug"))
-			bug();
 		else if (cmd(line, "tasker"))
 			tasker();
 		else if (cmd(line, "snake"))
 			snake_main();
+		else if (cmd(line, "ls"))
+			ls();
 		else {
 			// tokenize
 			char *argv[MAX_ARGS];
-			int   argc  = 0;
-			char *token = strtok(line, " ");
-			while (token && argc < MAX_ARGS - 1) {
-				argv[argc++] = token;
-				token        = strtok(NULL, " ");
-			}
-			argv[argc] = NULL;
+			int   argc = tokenize(line, argv, MAX_ARGS);
 
-			/* handle cd */
-			if (argc > 0 && strcmp(argv[0], "cd") == 0) {
-				char *dir = (argc > 1) ? argv[1] : getenv("HOME");
-				if (!dir)
-					dir = "/";
-				if (chdir(dir) != 0)
-					fprintf(stderr, "cd: %s: %s\n", dir, strerror(errno));
+			if (argc == 0)
 				continue;
-			}
 
-			/* fork */
-			if (argc > 0) {
+			if (cmd(line, "bug"))
+				bug(argc, argv);
+			else if (cmd(line, "ted"))
+				ted(argc, argv);
+			else if (cmd(line, "mkdir"))
+				mkdir_cmd(argc, argv);
+			else if (cmd(line, "touch"))
+				touch_cmd(argc, argv);
+			else if (cmd(line, "cd"))
+				cd_cmd(argc, argv);
+			else if (cmd(line, "rm"))
+				rm_cmd(argc, argv);
+			else {   // fork
 				pid_t pid = fork();
 				if (pid < 0) {
 					perror("fork failed");

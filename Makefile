@@ -18,11 +18,16 @@ SRC = shell.c \
 	  cal.c \
 	  passman.c \
 	  sudoku.c \
-	  sysinfo.c \
 	  tic-tac-toe.c \
 	  bug.c \
 	  sadik.c \
-	  snake.c
+	  snake.c \
+	  ls.c \
+	  mkdir.c \
+	  touch.c \
+	  cd.c \
+	  rm.c \
+	  ted.c
 OBJ = ${SRC:.c=.o}
 
 # Library sources
