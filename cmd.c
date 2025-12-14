@@ -36,11 +36,13 @@ Prog cmds[] = {
 Prog progs[] = {
 	{ "calculator", "calc",  "Scientific calculator" },
 	{ "calender",   "cal",   "Simple calender shows weeks and days of the current month" },
+	{ "passman",    "",      "Password manager for MutinyOS" },
 	{ "snake",      "",      "Games/snake" },
 	{ "sudoku",     "",      "Games/sudoku" },
 	{ "tasker",     "",      "Quick task manager from the terminal" },
 	{ "ted",        "",      "Standard text editor for MutinyOS" },
 	{ "tictactoe",  "",      "Games/tictactoe" },
+	{ "sh",         "",      "MutinyOS's standard POSIX shell to control the system" },
 	{ NULL,         NULL,    NULL }
 };
 // clang-format on

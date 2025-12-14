@@ -80,8 +80,9 @@ rewind_prompt:
 }
 
 void addusr() {
-	puts("Adding a new user...");
-	puts("-----------------");
+	puts("======================");
+	puts(" Adding a new user... ");
+	puts("======================");
 
 	char fullname[BUFFSIZE];
 	char username[BUFFSIZE];
