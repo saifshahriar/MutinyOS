@@ -1,5 +1,5 @@
 # mutinyos version
-VERSION = 0.1
+VERSION = 0.2.1
 
 # Customize below to fit your system
 
