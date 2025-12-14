@@ -37,7 +37,6 @@ void eqn() {
 	getmaxyx(stdscr, r, c);
 
 	while (1) {
-		/* get current terminal width */
 		int rows, cols;
 		getmaxyx(stdscr, rows, cols);
 
