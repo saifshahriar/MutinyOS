@@ -80,7 +80,7 @@ int main() {
 	}
 
 	clrscr();
-	printf("Hey %s!\n", globals.fullname);
+	/* printf("Hey %s!\n", globals.fullname); */
 	print_help();
 
 	char line[MAX_CMD];
