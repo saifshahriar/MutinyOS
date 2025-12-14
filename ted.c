@@ -6,6 +6,7 @@
 
 #define MAX_LINES 1000
 #define MAX_LEN   256
+#define CMD_LEN   128
 
 char *lines[MAX_LINES];
 int   line_count = 0;
@@ -62,7 +63,7 @@ static void load_file(const char *filename) {
 }
 
 int ted(int argc, char *argv[]) {
-	char cmd[16];
+	char cmd[CMD_LEN];
 	char fname[128] = { 0 };
 
 	if (argc > 1) {
