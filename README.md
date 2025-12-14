@@ -110,28 +110,26 @@ saif@mutiny:$> exit
 ## Current Status
 
 <!-- current-status start -->
-
 ```bash
 ───────────────────────────────────────────────────────────────────────────────
 Language                 Files     Lines   Blanks  Comments     Code Complexity
 ───────────────────────────────────────────────────────────────────────────────
-C                           22      2598      446       127     2025        497
-C Header                    17       204       40        35      129          0
-Makefile                     2       115       21        20       74          0
+C                           31      4147      665       140     3342        852
+C Header                    30       212       39        35      138          0
+Makefile                     2       131       22        21       88          0
 License                      1       674      121         0      553          0
 Markdown                     1       163       46         0      117          0
 Shell                        1        33        7         1       25          2
 ───────────────────────────────────────────────────────────────────────────────
-Total                       44      3787      681       183     2923        499
+Total                       66      5360      900       197     4263        854
 ───────────────────────────────────────────────────────────────────────────────
-Estimated Cost to Develop (organic) $83,313
-Estimated Schedule Effort (organic) 5.35 months
-Estimated People Required (organic) 1.38
+Estimated Cost to Develop (organic) $123,821
+Estimated Schedule Effort (organic) 6.22 months
+Estimated People Required (organic) 1.77
 ───────────────────────────────────────────────────────────────────────────────
-Processed 110833 bytes, 0.111 megabytes (SI)
+Processed 146037 bytes, 0.146 megabytes (SI)
 ───────────────────────────────────────────────────────────────────────────────
 ```
-
 <!-- current-status end -->
 
 See commit history for more information.
