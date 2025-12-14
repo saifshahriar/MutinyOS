@@ -19,7 +19,7 @@ SRC = shell.c \
 	  sudoku.c \
 	  tic-tac-toe.c \
 	  bug.c \
-	  sadik.c \
+	  tasker.c \
 	  snake.c \
 	  ls.c \
 	  mkdir.c \
