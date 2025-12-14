@@ -9,7 +9,8 @@ MANPREFIX = ${PREFIX}/share/man
 
 # includes and libs
 # INCS = -I${X11INC} -I${FREETYPEINC}
-LIBS = -lm -lncurses -lzmq -lczmq -lcrypt
+# LIBS = -lm -lncurses -lzmq -lczmq -lcrypt
+LIBS = -lm -lncurses -lcrypt
 
 # flags
 CPPFLAGS = -D_DEFAULT_SOURCE -D_BSD_SOURCE -D_XOPEN_SOURCE=700L -DVERSION=\"${VERSION}\"

@@ -10,7 +10,6 @@ SRC = shell.c \
 	  hostname.c \
 	  whoami.c \
 	  credit.c \
-	  chat.c \
 	  register.c \
 	  login.c \
 	  users.c \

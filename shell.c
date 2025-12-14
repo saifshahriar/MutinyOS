@@ -14,7 +14,6 @@
 #include "cal.h"
 #include "calc.h"
 #include "cd.h"
-#include "chat.h"
 #include "cmd.h"
 #include "credit.h"
 #include "date.h"
@@ -118,8 +117,6 @@ int main() {
 			whoami();
 		else if (cmd(line, "credit"))
 			credit();
-		else if (cmd(line, "chat"))
-			chat_client();
 		else if (cmd(line, "users"))
 			users();
 		else if (cmd(line, "chusr"))
